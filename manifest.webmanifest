@@ -1,0 +1,13 @@
+{
+  "name": "Bilan Clinique",
+  "short_name": "BilanClinique",
+  "description": "Examens cliniques par problématique et orientation diagnostique — 100% hors ligne",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f5f7f8",
+  "theme_color": "#0f4c5c",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

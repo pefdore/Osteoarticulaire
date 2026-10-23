@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f4c5c">
+<meta name="description" content="Bilan clinique par problématique — web app hors ligne">
+<title>Bilan Clinique — Examens & Orientation Diagnostique</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#/">🩺 <span>Bilan Clinique</span></a>
+  <div class="offline-badge" id="offline-badge" hidden>Hors ligne — mode local</div>
+  <nav id="topnav"></nav>
+</header>
+
+<main id="view"></main>
+
+<dialog id="howto-dialog">
+  <div class="howto-content" id="howto-content"></div>
+  <button class="btn secondary" onclick="document.getElementById('howto-dialog').close()">Fermer</button>
+</dialog>
+
+<script src="js/engine.js"></script>
+<script src="js/data/scapulalgies.js"></script>
+<script src="js/data/gonalgies.js"></script>
+<script src="js/data/cheville.js"></script>
+<script src="js/data/lombalgies.js"></script>
+<script src="js/data/cervicalgies.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
