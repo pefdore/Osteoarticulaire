@@ -93,13 +93,28 @@
     }
     view.innerHTML = `
       <h1>Bilan clinique par problématique</h1>
-      <p class="subtitle">Choisissez une région, saisissez l'examen clinique et obtenez une orientation diagnostique. Les rappels « comment faire » accompagnent chaque point.</p>
+      <p class="subtitle">Cliquez sur la zone douloureuse du bonhomme, ou choisissez un module ci-dessous. Examen structuré (statique, dynamique, neuro) avec rappels « comment faire » et orientation diagnostique.</p>
+      <div class="card">
+        <div class="bodymap-wrap">
+          <div>
+            <div class="view-label">Vue de face</div>
+            ${window.BODYMAP.face}
+          </div>
+          <div>
+            <div class="view-label">Vue de dos</div>
+            ${window.BODYMAP.back}
+          </div>
+        </div>
+      </div>
       <div class="grid-home">${cards}</div>
       <div class="card" style="margin-top:1.5rem">
         <h3>✔️ 100 % hors ligne</h3>
         <p style="font-size:0.9rem;color:var(--muted)">Cette application fonctionne sans connexion internet. Ajoutez-la à votre écran d'accueil (mobile : menu → « Ajouter à l'écran d'accueil ») pour l'utiliser comme une app. Les bilans sont enregistrés uniquement sur cet appareil.</p>
       </div>
     `;
+    view.querySelectorAll(".zone").forEach(z => {
+      z.addEventListener("click", () => { location.hash = "#/" + z.dataset.module; });
+    });
   }
 
   // ---------- form rendering ----------
