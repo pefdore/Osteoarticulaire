@@ -1,4 +1,4 @@
-const CACHE = 'bilan-clinique-v1';
+const CACHE = 'bilan-clinique-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const ASSETS = [
   './css/style.css',
   './js/engine.js',
   './js/app.js',
+  './js/bodymap.js',
   './js/data/scapulalgies.js',
   './js/data/gonalgies.js',
   './js/data/cheville.js',
